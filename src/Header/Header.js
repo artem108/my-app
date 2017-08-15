@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
 import './Header.css'
+import  RadarGraph from '../Menu/AboutMe/GraphSckills.js'
 
 class Header extends Component {
   render() {
     return (
       <div className='header-container'>
+        <div>
+          <RadarGraph />
+        </div>
         <div className='header-img'></div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
