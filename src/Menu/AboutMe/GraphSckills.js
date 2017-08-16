@@ -11,7 +11,7 @@ class GraphSckills extends Component {
       datasets: [
         {
           label: 'max',
-          data: [100, 100, 100, 100, 100],
+          data: [10, 10, 10, 10, 10],
           backgroundColor: 'rgba(26, 179, 148, 1)',
           borderColor: 'rgba(26, 179, 148, 1))',
           pointBackgroundColor: 'rgba(26, 179, 148, 1)',
@@ -21,7 +21,7 @@ class GraphSckills extends Component {
         },
         {
           label: 'min',
-          data:  [60, 90, 80, 45, 10],
+          data:  [6, 9, 8, 4, 1],
           backgroundColor: 'rgba(26, 179, 148, 1)',
           borderColor: 'rgba(26, 179, 148, 1)',
           pointBackgroundColor: 'rgba(26, 179, 148, 1)',
@@ -33,7 +33,7 @@ class GraphSckills extends Component {
     }
     return (
       <div className='radar-graph'>
-        <Radar data={data}  />
+        <Radar data={data} width='450px' height='500px' />
         </div>
     );
   }
