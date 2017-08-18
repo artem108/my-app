@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import './Entrance.css'
+import Main from '../Main/Main'
 
 class Entrance extends Component {
   constructor(props) {
@@ -47,7 +48,7 @@ class Entrance extends Component {
     }
 
     if (this.state.showContent3) {
-      // content = <Header />
+      content = <Main/>
     } else  {
       entrance = <div className='entrance-container'>
         <p>Hello! My name Artem, I'm Frontend developer(I think so). And in this site/web page/web application (call it what you want),
