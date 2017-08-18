@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import './Menu.css'
 
 class Menu extends Component {
   render() {
     return (
-      <div className='header-container'>
-        <div className='main-menu'>
+
+        <div className='main-menu-container'>
           <div className=''>
             <p>News</p>
             </div>
@@ -18,9 +19,15 @@ class Menu extends Component {
                   <p>Anything</p>
                   </div>
           </div>
-        </div>
+    
     );
   }
 }
 
 export default Menu
+{/* <ul>
+  <li>News</li>
+    <li>Aboute me</li>
+        <li>Text</li>
+          <li>Anything</li>
+        </ul> */}
