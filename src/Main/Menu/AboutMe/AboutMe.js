@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Radar } from 'react-chartjs-2';
 
-class GraphSckills extends Component {
+class AboutMe extends Component {
 
   render() {
     const data = {
@@ -37,4 +37,4 @@ class GraphSckills extends Component {
   }
 }
 
-export default GraphSckills
+export default AboutMe
