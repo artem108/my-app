@@ -1,5 +1,7 @@
 .btnEntrance2 {
-  float: right; }
+  display: flex;
+  justify-content: flex-start; }
 
 .btnEntrance3 {
-  float: left; }
+  display: flex;
+  justify-content: flex-end; }

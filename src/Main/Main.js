@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Main.css'
 import Home from './Menu/Home/Home'
+import News from './Menu/News/News'
 import AboutMe from './Menu/AboutMe/AboutMe'
 
 class Main extends Component {
@@ -9,21 +10,35 @@ class Main extends Component {
     super(props)
     this.state = {
       showHome: true,
-      showAboutMe: false
+      showAboutMe: false,
+      showNews: false
     }
     this.showHome = this.showHome.bind(this)
     this.showAboutMe= this.showAboutMe.bind(this)
+    this.showNews= this.showNews.bind(this)
   }
 
   showHome() {
-         this.setState({showHome: true,
-                        showAboutMe: !this.state.showAboutMe})
+         this.setState({
+           showHome: true,
+           showNews: false,
+           showAboutMe: false,
+            })
      }
-     showAboutMe() {
-            this.setState({showAboutMe: true,
-                            showHome: !this.state.showHome})
-        }
-
+   showAboutMe() {
+        this.setState({
+          showAboutMe: true,
+          showHome: false,
+          showNews: false
+        })
+    }
+    showNews() {
+      this.setState({
+        showNews: true,
+        showHome: false,
+        showAboutMe: false
+      })
+    }
   render() {
 
     let menuContent
@@ -34,13 +49,16 @@ class Main extends Component {
     if (this.state.showAboutMe) {
       menuContent = <AboutMe />
     }
+    if (this.state.showNews) {
+      menuContent = <News />
+    }
     return (
       <div>
         <div className='main-menu-container'>
           <div onClick={this.showHome.bind(this)}>
             Home
           </div>
-          <div className=''>
+          <div onClick={this.showNews.bind(this)}>
             <p>News</p>
             </div>
             <div onClick={this.showAboutMe.bind(this)}>
