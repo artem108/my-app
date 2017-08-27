@@ -27,6 +27,7 @@ class AboutMe extends Component {
       <div className='radar-graph'>
         <Radar data={data} />
         </div>
+
     );
   }
 }

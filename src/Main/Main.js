@@ -3,6 +3,7 @@ import './Main.css'
 import Home from './Menu/Home/Home'
 import News from './Menu/News/News'
 import AboutMe from './Menu/AboutMe/AboutMe'
+import TalkMe from './Menu/TalkMe/TalkMe'
 
 class Main extends Component {
 
@@ -11,11 +12,13 @@ class Main extends Component {
     this.state = {
       showHome: true,
       showAboutMe: false,
-      showNews: false
+      showNews: false,
+      showTalkMe: false
     }
     this.showHome = this.showHome.bind(this)
     this.showAboutMe= this.showAboutMe.bind(this)
     this.showNews= this.showNews.bind(this)
+    this.showTalkMe= this.showTalkMe.bind(this)
   }
 
   showHome() {
@@ -23,22 +26,35 @@ class Main extends Component {
            showHome: true,
            showNews: false,
            showAboutMe: false,
+           showTalkMe: false
             })
      }
    showAboutMe() {
         this.setState({
           showAboutMe: true,
           showHome: false,
-          showNews: false
+          showNews: false,
+          showTalkMe: false
         })
     }
     showNews() {
       this.setState({
         showNews: true,
         showHome: false,
+        showAboutMe: false,
+        showTalkMe: false
+      })
+    }
+
+    showTalkMe() {
+      this.setState({
+        showTalkMe: true,
+        showNews: false,
+        showHome: false,
         showAboutMe: false
       })
     }
+
   render() {
 
     let menuContent
@@ -52,6 +68,9 @@ class Main extends Component {
     if (this.state.showNews) {
       menuContent = <News />
     }
+    if (this.state.showTalkMe) {
+      menuContent = <TalkMe />
+    }
     return (
       <div>
         <div className='main-menu-container'>
@@ -64,8 +83,8 @@ class Main extends Component {
             <div onClick={this.showAboutMe.bind(this)}>
               <p>Aboute me</p>
               </div>
-              <div className=''>
-                <p>Text</p>
+              <div onClick={this.showTalkMe.bind(this)}>
+                <p>TalkMe</p>
                 </div>
                 <div className=''>
                   <p>Anything</p>

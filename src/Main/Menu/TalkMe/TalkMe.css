@@ -1,0 +1,19 @@
+.talkMe-container {
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+  display: flex;
+  flex-direction: column; }
+
+.dialog-item {
+  margin: 0 auto;
+  width: 90%;
+  position: relative;
+  height: 400px;
+  background: #fff; }
+
+.controller-dialog {
+  margin: 0 auto;
+  width: 90%;
+  position: relative;
+  height: 100px; }
