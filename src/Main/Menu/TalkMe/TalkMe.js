@@ -24,6 +24,7 @@ class TalkMe extends Component {
   }
 
   render() {
+
     return (
       <section className='talkMe-container'>
         <div className='dialog-item'>
@@ -32,9 +33,9 @@ class TalkMe extends Component {
 
         </div>
           <div className='controller-dialog '>
-          <form className="App" onSubmit={this.onSubmit}>
-         <input value={this.state.term} onChange={this.onChange} />
-         <button>Submit</button>
+          <form onSubmit={this.onSubmit}>
+         <input value={this.state.term} onChange={this.onChange} className="dialog-input-send"/>
+         <button className='dialog-btn-send'><i className="fa fa-paper-plane" aria-hidden="true"></i></button>
        </form>
         </div>
         </section>

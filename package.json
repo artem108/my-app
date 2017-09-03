@@ -9,7 +9,9 @@
     "react": "^15.6.1",
     "react-chartjs-2": "^2.5.7",
     "react-dom": "^15.6.1",
-    "react-scripts": "1.0.11"
+    "react-redux": "^5.0.6",
+    "react-scripts": "1.0.11",
+    "redux": "^3.7.2"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
@@ -19,5 +21,9 @@
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "eslint": "^4.6.0",
+    "eslint-config-google": "^0.9.1"
   }
 }

@@ -78,16 +78,16 @@ class Main extends Component {
             Home
           </div>
           <div onClick={this.showNews.bind(this)}>
-            <p>News</p>
+            News
             </div>
             <div onClick={this.showAboutMe.bind(this)}>
-              <p>Aboute me</p>
+              Aboute me
               </div>
               <div onClick={this.showTalkMe.bind(this)}>
-                <p>TalkMe</p>
+                TalkMe
                 </div>
                 <div className=''>
-                  <p>Anything</p>
+                  Anything
                   </div>
           </div>
           <div>

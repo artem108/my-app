@@ -11,13 +11,19 @@
 body {
 	padding: 5px;
 	}
-h1, h2, h3, h4, h5, h6, p, pre, blockquote, form, ul, ol, dl {
+h1, h2, h3, h4, h5, h6, p, pre, blockquote, ul, ol, dl {
 	margin: 20px 0;
 	}
 li, dd, blockquote {
 	margin-left: 40px;
+	list-style: none;
 	}
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	}
+ /* Remove outline on the forms and links */
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
