@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './TalkMe.css'
-import List from './List';
+import Questions from './Questions';
+import Answers from './Answers'
 
 class TalkMe extends Component {
   constructor(props) {
@@ -28,9 +29,8 @@ class TalkMe extends Component {
     return (
       <section className='talkMe-container'>
         <div className='dialog-item'>
-
-          <List items={this.state.items} />
-
+          <Answers items={this.state.items} />
+          <Questions  items={this.state.items} />
         </div>
           <div className='controller-dialog '>
           <form onSubmit={this.onSubmit}>

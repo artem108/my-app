@@ -1,12 +1,10 @@
 import React from 'react';
 
-const List = props => (
-  <ul>
+const Answers = props => (
+  <ul className='dialog-answers'>
     {
       props.items.map((item, index) =>
-      <li key={index}>
-        {item}
-        <div>
+      <li  className='user-text'>
           {
           (() => {
             if (item === 'hi') {
@@ -41,7 +39,7 @@ const List = props => (
           })()
         }
 
-        </div>
+
       </li>
     )
 
@@ -50,4 +48,4 @@ const List = props => (
   </ul>
 );
 
-export default List;
+export default Answers;

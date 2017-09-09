@@ -1,19 +1,21 @@
 .talkMe-container {
   width: 100%;
-  height: 100%;
+  height: 90vh;
   display: flex;
   flex-direction:column;
 }
 .dialog-item {
   margin: 0 auto;
+  display: flex;
   width: 90%;
   position: relative;
   height: 50px;
   background: #fff;
 }
 .controller-dialog {
-  margin: 0 auto;
+  margin-top:80vh;
   width: 90%;
+  margin-left: 6%;
   position: relative;
   height: 100px;
 }
@@ -26,12 +28,51 @@
 }
 .dialog-btn-send {
   text-align: center;
-  font-size: 40px;
+  font-size: 18px;
   color: grey;
   background-color: #F3F5F6;
   border-left: 2px solid grey;
-  width: 10%;
+  width: 7%;
   height: 50px;
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
+}
+.dialog-answers {
+  margin-top: 20px;
+  width: 50%;
+  text-align: left;
+}
+.dialog-answers li {
+  margin-top: 50px;
+  display: inline-block;
+  padding-left: 10px;
+  max-width: 90%;
+  min-width: 44%;
+  max-height: 200px;
+  min-height: 50px;
+  line-height: 50px;
+  background-color: #F3F5F6;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+    font-size: 20px;
+}
+.dialog-question {
+width: 50%;
+text-align: right;
+}
+.dialog-question li {
+  display: inline-block;
+  margin-bottom: 50px;
+  font-size: 20px;
+  padding-right: 10px;
+  max-width: 90%;
+  min-width: 44%;
+  max-height: 200px;
+  min-height: 50px;
+  line-height: 50px;
+  background-color: #F3F5F6;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
