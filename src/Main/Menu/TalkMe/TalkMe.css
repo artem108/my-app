@@ -21,7 +21,7 @@
 
 .dialog-input-send {
   background-color: #F3F5F6;
-  width: 88%;
+  width: 81%;
   height: 50px;
   border-top-left-radius: 7px;
   border-bottom-left-radius: 7px; }
@@ -75,3 +75,11 @@
   border-bottom-left-radius: 20px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px; }
+
+#sketchpad {
+  width: 300px;
+  height: 300px; }
+
+#thumbnail {
+  width: 300px;
+  height: 300px; }

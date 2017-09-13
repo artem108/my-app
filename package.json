@@ -24,6 +24,8 @@
   },
   "devDependencies": {
     "eslint": "^4.6.0",
-    "eslint-config-google": "^0.9.1"
+    "eslint-config-google": "^0.9.1",
+    "brain.js": "^0.7.0",
+    "mnist": "git+https://github.com/ApelSYN/mnist.git"
   }
 }
