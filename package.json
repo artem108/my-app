@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://artem108.github.io/myapp",
   "dependencies": {
     "chart.js": "^2.6.0",
     "node-sass-chokidar": "^0.0.3",
@@ -20,12 +21,15 @@
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "brain.js": "^0.7.0",
     "eslint": "^4.6.0",
     "eslint-config-google": "^0.9.1",
-    "brain.js": "^0.7.0",
+    "gh-pages": "^1.0.0",
     "mnist": "git+https://github.com/ApelSYN/mnist.git"
   }
 }
