@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 class List extends Component {
 
 showList() {
-  return this.props.examples.map((example) => {
+  return this.props.entrance.map((example) => {
     return (
       <li key={example.id}>{example.cur}</li>
     )
@@ -25,7 +25,7 @@ showList() {
 const mapStateToProps = (state) => {
   return {
 
-    examples:state.examples
+    entrance:state.entrance
   }
 
 }
