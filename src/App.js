@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
-import Entrance from './Entrance/Entrance'
-// import TalkMe from './Main/Menu/TalkMe/TalkMe'
+ import Entrance from './Entrance/Entrance'
+ import TalkMe from './Main/Menu/TalkMe/components/TalkMe'
 
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
 
     return (
       <div className="App">
-          <Entrance />
+          <TalkMe />
         </div>
     );
   }

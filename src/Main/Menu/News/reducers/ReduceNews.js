@@ -3,13 +3,13 @@ export default function () {
     {
       id: 1,
       title: 'Cassini the grand finale',
-      description: 'The Cassini–Huygens mission was a collaboration between NASA , and the Italian Space Agency (ASI) to send a probe to study the planet Saturn completed his mission and burned in the atmosphere of Saturn.',
+      description: 'The Cassini–Huygens mission was a collaboration between NASA , and the ASI to send a probe to study the planet Saturn completed his mission and burned in the atmosphere of Saturn.',
       news: 'la=la'
     },
     {
       id: 2,
       title: 'Little about Spacetime',
-      description: 'In physics, spacetime is any mathematical model that fuses the three dimensions of space and the one dimension of time into a single 4‑dimensional continuum. Today, lets talk about this.',
+      description: 'In physics, spacetime is any mathematical model that fuses the three dimensions of space and the one dimension of time into a single 4‑dimensional continuum.',
       news: 'la-la'
     },
     {

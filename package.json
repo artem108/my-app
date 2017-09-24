@@ -10,6 +10,7 @@
     "react": "^15.6.1",
     "react-chartjs-2": "^2.5.7",
     "react-dom": "^15.6.1",
+    "react-preloader-icon": "^0.1.0",
     "react-redux": "^5.0.6",
     "react-scripts": "1.0.11",
     "redux": "^3.7.2"

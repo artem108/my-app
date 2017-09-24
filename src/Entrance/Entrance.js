@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import PreloaderIcon, {ICON_TYPE} from 'react-preloader-icon';
 import List from './containers/Entrance'
 import './Entrance.css'
 import Main from '../Main/Main'
@@ -28,6 +29,20 @@ class Entrance extends Component {
         this.setState({showContent3: true})
            }
 
+           componentDidMount() {
+             setTimeout(() =>
+               <div>
+                 <PreloaderIcon
+                   type={ICON_TYPE.OVAL}
+                   size={32}
+                   strokeWidth={8} // min: 1, max: 50
+                   strokeColor="#F0AD4E"
+                   duration={800}
+                 />
+               </div>
+
+             , 1500);
+           }
   render() {
 
     let content
@@ -61,7 +76,6 @@ class Entrance extends Component {
     }
     return (
       <div>
-
        {entrance}
         {content}
 

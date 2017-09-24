@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import NewsList from './containers/NewsList'
-import './News.css'
+import NewsList from '../containers/NewsList'
+import '../News.css'
 
 class News extends Component {
 

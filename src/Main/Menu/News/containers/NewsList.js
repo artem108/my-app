@@ -3,6 +3,9 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 class NewsList extends Component {
+  showFull() {
+    console.log('WILL BE FULL NEWS');
+  }
   showList() {
     return this.props.news.map((key) => {
       return (
@@ -16,7 +19,7 @@ class NewsList extends Component {
               <p>{key.description}</p>
             </section>
             <div  className="read-more" >
-              <a href="#">Read more...</a>
+              <a onClick={this.showFull.bind(this)}>Read more...</a>
             </div>
           </section>
       )
@@ -32,7 +35,6 @@ class NewsList extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-
     news:state.news
   }
 
