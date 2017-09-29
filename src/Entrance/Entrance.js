@@ -3,7 +3,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import PreloaderIcon, {ICON_TYPE} from 'react-preloader-icon';
 import List from './containers/Entrance'
 import './Entrance.css'
-import Main from '../Main/Main'
+import Main from '../Main/components/Main'
 import NameUser from './NameUser'
 
 class Entrance extends Component {

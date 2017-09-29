@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 import entranceReducers from '../Entrance/entranc'
-import newsReducers from '../Main/Menu/News/reducers/ReduceNews'
+import newsReducers from '../Main/reducers/ReduceNews'
 
 const allReducers = combineReducers ({
 

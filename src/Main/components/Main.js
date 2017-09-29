@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import './Main.css'
-import Home from './Menu/Home/Home'
-import News from './Menu/News/components/News'
-import AboutMe from './Menu/AboutMe/AboutMe'
-import TalkMe from './Menu/TalkMe/components/TalkMe'
+import '../../css/Main.css'
+import Home from './Home'
+import News from './News'
+import AboutMe from './AboutMe'
+import TalkMe from './TalkMe'
 
 class Main extends Component {
 

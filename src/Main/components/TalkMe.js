@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './TalkMe.css'
+import '../../css/TalkMe.css'
 import Questions from './Questions';
 import Answers from './Answers'
 

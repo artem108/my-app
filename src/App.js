@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
- import Entrance from './Entrance/Entrance'
- import TalkMe from './Main/Menu/TalkMe/components/TalkMe'
-
+import Entrance from './Entrance/Entrance'
 
 class App extends Component {
 
@@ -10,7 +8,7 @@ class App extends Component {
 
     return (
       <div className="App">
-          <TalkMe />
+          <Entrance />
         </div>
     );
   }
