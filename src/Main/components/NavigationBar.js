@@ -7,8 +7,8 @@ class NavigationBar extends Component {
     return (
       <section className='navigation-container'>
         <Link to='/'>Home</Link>
-        <Link to='/aboute'>Aboute me</Link>
-        <Link to='/talk'>Talk</Link>
+        <Link to='/skills'>My skills</Link>
+        <Link to='/aboutMe'>Aboute me</Link>
           {/* <Link to='/news'>News</Link> */}
         </section>
     );

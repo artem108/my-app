@@ -1,6 +1,6 @@
 .home-img {
   width: 100%;
-  height: 600px;
+  height: 700px;
   background-image: url(../img/home-img.jpg);
   background-position: center center;
   background-repeat: no-repeat;
@@ -14,27 +14,28 @@
   color: white;
   font-size: 3em;
 }
-section p {
-  position: relative;
-  text-align: left;
-  font-size: 25px;
-  	color: black; background-color: white; text-shadow: none;
-  	-moz-transition:
-  		background-color 700ms linear,
-  			   color 700ms linear;
-  	-webkit-transition:
-  		background-color 700ms linear,
-  			   color 700ms linear;
-  	-o-transition:
-  		background-color 1000ms linear,
-  			   color 700ms linear;
-  	transition:
-  		background-color 1000ms linear,
-  			   color 700ms linear;
+.home-img h2 {
+  text-align: center;
+  font-size: 1em;
 }
-section p:hover {
-  color: white; background-color: black; text-shadow: none;
-  h3 {
-      color: black; background-color: black; text-shadow: none;
-  }
-}
+// .home-text{
+//   position: relative;
+//   text-align: left;
+//   font-size: 25px;
+//   	color: black; background-color: white; text-shadow: none;
+//   	-moz-transition:
+//   		background-color 700ms linear,
+//   			   color 700ms linear;
+//   	-webkit-transition:
+//   		background-color 700ms linear,
+//   			   color 700ms linear;
+//   	-o-transition:
+//   		background-color 1000ms linear,
+//   			   color 700ms linear;
+//   	transition:
+//   		background-color 1000ms linear,
+//   			   color 700ms linear;
+// }
+// .home-text:hover {
+//   color: white; background-color: black; text-shadow: none;
+// }

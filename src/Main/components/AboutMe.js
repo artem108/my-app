@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import { Radar } from 'react-chartjs-2';
+import '../../css/AbouteMe.css'
+import { RevealP }  from './Home.style'
+import WheninView from './WheninView'
 
 class AboutMe extends Component {
 
@@ -23,10 +26,34 @@ class AboutMe extends Component {
         }
       ]
     }
+    const style = {
+      color: 'red',
+      fontSize: '3em'
+    }
+    const p ={
+      fontSize: '2em'
+    }
     return (
-      <div className='radar-graph'>
+      <section>
+        <h2 style={style}>My skills</h2>
+      <section className='radar-graph'>
         <Radar data={data} />
-        </div>
+        </section>
+
+        <WheninView>
+          {
+            ({isInView}) =>
+            <RevealP hide={!isInView}> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Duis aute irure dolor in reprehenderit in voluptate velit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </RevealP>
+          }
+        </WheninView>
+      </section>
 
     );
   }
