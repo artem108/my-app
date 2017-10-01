@@ -1,8 +1,40 @@
 .home-img {
   width: 100%;
-  height: 500px;
+  height: 600px;
   background-image: url(../img/home-img.jpg);
   background-position: center center;
   background-repeat: no-repeat;
 
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+
+  text-align: center;
+  color: white;
+  font-size: 3em;
+}
+section p {
+  position: relative;
+  text-align: left;
+  font-size: 25px;
+  	color: black; background-color: white; text-shadow: none;
+  	-moz-transition:
+  		background-color 700ms linear,
+  			   color 700ms linear;
+  	-webkit-transition:
+  		background-color 700ms linear,
+  			   color 700ms linear;
+  	-o-transition:
+  		background-color 1000ms linear,
+  			   color 700ms linear;
+  	transition:
+  		background-color 1000ms linear,
+  			   color 700ms linear;
+}
+section p:hover {
+  color: white; background-color: black; text-shadow: none;
+  h3 {
+      color: black; background-color: black; text-shadow: none;
+  }
 }

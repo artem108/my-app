@@ -1,21 +1,23 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
 import '../../css/Home.css'
-import Header from './Header'
+import ReactTimeout from 'react-timeout'
 
 class Home extends Component {
   render() {
     return (
       <section>
-        <div>
-          <Header />
-        </div>
-        <div className='home-img'>
+        <section className='home-img'>
+          <h1>Artem Arshaniy</h1>
+          <h2>Front-end Developer</h2>
+        </section>
 
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <h3>You can hover this text, if you want or still dont wo this.</h3>
+        </p>
         </section>
     );
   }

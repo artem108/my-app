@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-import Entrance from './Entrance/Entrance'
+import NavigationBar from './Main/components/NavigationBar'
 
 class App extends Component {
 
@@ -8,7 +8,9 @@ class App extends Component {
 
     return (
       <div className="App">
-          <Entrance />
+        <NavigationBar />
+
+        {this.props.children}
         </div>
     );
   }
