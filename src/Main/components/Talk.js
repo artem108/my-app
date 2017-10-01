@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import '../../css/Talk.css'
-import ReactPlayer from 'react-player'
 import { Title, ChillImg, Text, H2 }  from './Talk.style'
 
 
