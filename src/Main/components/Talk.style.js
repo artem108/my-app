@@ -5,6 +5,7 @@ export const Title = styled.h1 `
   font-size: 3em;
   color: red;
   text-align: left;
+  cursor: pointer;
 `;
 export const Text = styled.p `
   margin-top: 0;

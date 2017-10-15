@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://artem108.github.io/myapp",
+  "homepage": "http://artem108.github.io/my-app",
   "dependencies": {
     "chart.js": "^2.6.0",
     "node-sass-chokidar": "^0.0.3",

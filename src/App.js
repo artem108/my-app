@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
 import NavigationBar from './Main/components/NavigationBar'
-
 class App extends Component {
 
   render() {
