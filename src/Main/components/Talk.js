@@ -27,14 +27,20 @@ class Talk extends Component {
       this.setState({clickRide: true })
   }
   render() {
+    const stylePointer = {
+      cursor: 'pointer'
+    }
     let styleItemSport = {
-      float:'right'
+      marginLeft: '900px',
+      marginTop: '-38px'
     }
     let styleItemWalk = {
-      float:'right'
+      marginLeft: '900px',
+      marginTop: '-38px'
     }
     let styleItemRide = {
-      float:'right'
+      marginLeft: '900px',
+      marginTop: '-38px'
     }
     let styleFinger = {
       display: 'none'
@@ -64,7 +70,6 @@ class Talk extends Component {
     }
 
     if (this.state.clickFinger) {
-      console.log('show sport grey');
       styleFinger = {
         display: ''
       }
@@ -115,20 +120,37 @@ class Talk extends Component {
       }
     }
 
+{/*
+  nextQuestion(type) {
+setState({{type}: true})
+}
+this.nextQuestion(type)
+  */}
     return (
       <section>
        <Title>About me</Title>
 
-         <H2 align='right' onClick={this.onClickFinger.bind(this)}>Whats wrong with you, are you realy ride on fingerboard?</H2>
+         <H2 align='right' onClick={this.onClickFinger.bind(this)} style={stylePointer}>Whats wrong with you, are you realy ride on fingerboard?
+           <div style={styleItemSport}>
+           <PreloaderIcon
+               type={ICON_TYPE.PUFF}
+               size={50}
+               strokeWidth={15} // min: 1, max: 50
+               strokeColor="red"
+               duration={800}
+
+           />
+         </div>
+         </H2>
          <Text style={styleFinger}>Fingerboarding yes, I spend aboute two hour to film this piece of... Component</Text>
         {/* <section className='chillFBImg' style={styleFinger}></section>*/}
           <section style={styleQuestionSport}>
-              <H2 align='right' onClick={this.onClickSport.bind(this)}>
+              <H2 align='right' onClick={this.onClickSport.bind(this)} style={stylePointer}>
                 Sport Whats wrong with you, are you realy ride on fingerboard?
                 <div style={styleItemSport}>
                 <PreloaderIcon
                     type={ICON_TYPE.PUFF}
-                    size={32}
+                    size={50}
                     strokeWidth={15} // min: 1, max: 50
                     strokeColor="red"
                     duration={800}
@@ -140,11 +162,11 @@ class Talk extends Component {
          <Text style={styleSport}>Fingerboarding yes, I spend aboute two hour to film this piece of... Component</Text>
 
          <section style={styleQuestionWalk}>
-             <H2 align='right' onClick={this.onClickWalk.bind(this)}>Walk Whats wrong with you, are you realy ride on fingerboard?
+             <H2 align='right' onClick={this.onClickWalk.bind(this)} style={stylePointer}>Walk Whats wrong with you, are you realy ride on fingerboard?
                <div style={styleItemWalk}>
                <PreloaderIcon
                     type={ICON_TYPE.PUFF}
-                    size={32}
+                    size={50}
                    strokeWidth={8} // min: 1, max: 50
                    strokeColor="red"
                    duration={800}
@@ -155,11 +177,11 @@ class Talk extends Component {
               <Text style={styleWalk}>Fingerboarding yes, I spend aboute two hour to film this piece of... Component</Text>
 
            <section style={styleQuestionRide}>
-               <H2 align='right' onClick={this.onClickRide.bind(this)}>Ride Whats wrong with you, are you realy ride on fingerboard?
+               <H2 align='right' onClick={this.onClickRide.bind(this)} style={stylePointer}>Ride Whats wrong with you, are you realy ride on fingerboard?
                  <div style={styleItemRide}>
                  <PreloaderIcon
                      type={ICON_TYPE.PUFF}
-                     size={32}
+                     size={50}
                      strokeWidth={8} // min: 1, max: 50
                      strokeColor="red"
                      duration={800}
