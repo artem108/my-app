@@ -16,15 +16,19 @@ class Talk extends Component {
   }
   onClickFinger() {
     this.setState({clickFinger: true })
+    Navigator.vibrate()
   }
   onClickSport() {
       this.setState({clickSport: true })
+      Navigator.vibrate()
   }
   onClickWalk() {
       this.setState({clickWalk: true })
+      Navigator.vibrate()
   }
   onClickRide() {
       this.setState({clickRide: true })
+      Navigator.vibrate()
   }
   render() {
     const stylePointer = {
@@ -143,7 +147,7 @@ this.nextQuestion(type)
          </div>
          </H2>
          <Text style={styleFinger}>Fingerboarding yes, I spend aboute two hour to film this piece of... Component</Text>
-        {/* <section className='chillFBImg' style={styleFinger}></section>*/}
+        <section className='chillFBImg' style={styleFinger}></section>
           <section style={styleQuestionSport}>
               <H2 align='right' onClick={this.onClickSport.bind(this)} style={stylePointer}>
                 Sport Whats wrong with you, are you realy ride on fingerboard?

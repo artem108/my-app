@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Radar } from 'react-chartjs-2';
 import '../../css/AbouteMe.css'
-import { RevealP }  from './Home.style'
+import { RevealPRight, RevealPLeft }  from './Home.style'
 import WheninView from './WheninView'
 
 class AboutMe extends Component {
@@ -33,25 +33,40 @@ class AboutMe extends Component {
     const p ={
       fontSize: '2em'
     }
+    const styleText= {
+      fontSize: '2em',
+      textAlign: 'left'
+    }
+    const radarStyle = {
+      width:'50%',
+      float:'left'
+    }
     return (
       <section>
         <h2 style={style}>My skills</h2>
-      <section className='radar-graph'>
+      <section style={radarStyle}>
         <Radar data={data} />
         </section>
 
-        <WheninView>
+        <WheninView style={radarStyle}>
           {
-            ({isInView}) =>
-            <RevealP hide={!isInView}> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Duis aute irure dolor in reprehenderit in voluptate velit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </RevealP>
-          }
+              ({isInView}) =>
+              <RevealPLeft hide={!isInView}>
+              </RevealPLeft>
+            }
+              </WheninView>
+              <p style={styleText}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+              <WheninView>
+            {
+                ({isInView}) =>
+                <RevealPRight hide={!isInView}>
+                </RevealPRight>
+              }
         </WheninView>
       </section>
 
