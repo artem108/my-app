@@ -18,6 +18,7 @@
     "react-timeout": "^1.0.1",
     "react-waypoint": "^7.1.0",
     "redux": "^3.7.2",
+    "source-map": "^0.6.1",
     "styled-components": "^2.2.0"
   },
   "scripts": {

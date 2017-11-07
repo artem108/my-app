@@ -1,5 +1,36 @@
 import styled, {css} from 'styled-components'
 
+export const Title = styled.h1 `
+  margin-top: 0;
+  font-size: 3em;
+  color: red;
+  text-align: left;
+  cursor: pointer;
+`;
+
+export const ImageText = styled.h2 `
+  text-align: center;
+  font-size: 1em;
+`;
+
+export const StyleText = styled.p `
+  font-size: 2em;
+  text-align: left;
+`;
+export const HomeImg = styled.section `
+  width: 100%;
+  height: 700px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 3em;
+`;
+
 export const RevealPRight = styled.p `
 position: relative;
 height:5px;

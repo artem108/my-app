@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import '../../css/Talk.css'
-import { Title, ChillImg, Text, H2 }  from './Talk.style'
+import { ChillImg, Text, H2 }   from './../../styled/Talk.style'
+import { Title }  from './../../styled/Home.style'
 import PreloaderIcon, {ICON_TYPE} from 'react-preloader-icon';
 
 
@@ -16,19 +17,15 @@ class Talk extends Component {
   }
   onClickFinger() {
     this.setState({clickFinger: true })
-    Navigator.vibrate()
   }
   onClickSport() {
       this.setState({clickSport: true })
-      Navigator.vibrate()
   }
   onClickWalk() {
       this.setState({clickWalk: true })
-      Navigator.vibrate()
   }
   onClickRide() {
       this.setState({clickRide: true })
-      Navigator.vibrate()
   }
   render() {
     const stylePointer = {
@@ -147,7 +144,7 @@ this.nextQuestion(type)
          </div>
          </H2>
          <Text style={styleFinger}>Fingerboarding yes, I spend aboute two hour to film this piece of... Component</Text>
-        <section className='chillFBImg' style={styleFinger}></section>
+        <ChillImg className='chillFBImg' style={styleFinger}></ChillImg>
           <section style={styleQuestionSport}>
               <H2 align='right' onClick={this.onClickSport.bind(this)} style={stylePointer}>
                 Sport Whats wrong with you, are you realy ride on fingerboard?
