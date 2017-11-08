@@ -13,7 +13,7 @@ export default (
 <Route path='/' component={App}>
   <IndexRoute path='/'component={Home}/>
   <Route path='/skills' component={AboutMe}></Route>
-  <Route path='/aboutME' component={Dialog}></Route>
+  <Route path='/aboutMe' component={Dialog}></Route>
   <Route path='/news' component={News}></Route>
 </Route>
 </Router>

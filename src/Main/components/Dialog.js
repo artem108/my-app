@@ -9,30 +9,45 @@ class Dialog extends Component {
   constructor(props) {
     super(props)
 	   this.state = {
-       answers: ['Answer'],
-       questions: ['Question?']
+       dialog: ['Answer','Question?' ]
      }
   }
   addItem() {
-    this.state.answers.push('Answer')
-    this.setState({answers: this.state.answers})
-    this.state.questions.push('Question')
-    this.setState({questions: this.state.questions})
+    this.state.dialog.push('Answer')
+    this.state.dialog.push('Question?')
+    this.setState({dialog: this.state.dialog})
   }
 
   render() {
-    const listAnswers = this.state.answers.map((item, index) => {
-          return <li key={index} style={{float:'left', paddingTop: '5px', width: '100%', textAlign: 'left'}}>{item}</li>;
-        })
-    const listQuestions = this.state.questions.map((item, index) => {
-          return <li key={index} onClick={this.addItem.bind(this)} style={{float: 'right', textAlign: 'right', paddingTop: '5px', width: '100%'}}>{item}</li>;
-        })
+    const arrDialog = this.state.dialog
+
+    const listAnswers = arrDialog.map((item, index) => {
+        if (item === 'Answer') {
+            return <li key={index} style={{textAlign: 'left', color: 'black', width: '100%'}} onClick={this.addItem.bind(this)}><H2>{item}</H2></li>;
+        } else {
+            return <li key={index} style={{textAlign: 'right', color: 'black', width: '100%', cursor: 'pointer'}}
+                    onClick={this.addItem.bind(this)}>
+                    <H2>{item}</H2></li>;
+        }
+    })
+
+    let lastQuestion = listAnswers[listAnswers.length - 1].props
+    const lastQuestStyle = lastQuestion.style
+    console.log(lastQuestion.children);
+    lastQuestStyle.color = 'red'
 
     return (
-      <section style={{width: '400px'}}>
-       <h1>hello</h1>
+      <section style={{width: '80%'}}>
+           <Title>About me</Title>
           {listAnswers}
-          {listQuestions}
+          <PreloaderIcon
+              type={ICON_TYPE.PUFF}
+              size={50}
+              strokeWidth={15} // min: 1, max: 50
+              strokeColor="red"
+              duration={800}
+              style={{float: 'right'}}
+          />
       </section>
     );
   }

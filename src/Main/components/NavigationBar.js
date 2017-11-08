@@ -7,7 +7,7 @@ import { Link } from 'react-router'
 class NavigationBar extends Component {
   render() {
     return (
-      <NavigationContainer  className='navigation-container' style={{display: 'none'}}>
+      <NavigationContainer  className='navigation-container'>
         <Link to='/'>Home</Link>
         <Link to='/skills'>My skills</Link>
         <Link to='/aboutMe'>Aboute me</Link>
