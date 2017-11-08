@@ -8,6 +8,7 @@
     "node-sass-chokidar": "^0.0.3",
     "npm-run-all": "^4.0.2",
     "react": "^15.6.1",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-chartjs-2": "^2.5.7",
     "react-dom": "^15.6.1",
     "react-preloader-icon": "^0.1.0",

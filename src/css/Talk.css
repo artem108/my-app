@@ -1,2 +1,9 @@
 .chillFBImg {
   background-image: url(../img/chill.png); }
+
+.slide-enter {
+  transform: translateX(-100%); }
+
+.slide-enter .slide-enter-active {
+  transform: translateX(0);
+  transition: transform 5s ease-out; }
