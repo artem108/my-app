@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import '../../css/Home.css'
-import { RevealPRight, RevealPLeft, Title, HomeImg, ImageText, StyleText }  from './../../styled/Home.style'
+import { RevealPRight, RevealPLeft, Title, HomeImg, ImageText, StyleText, SocialLinks, SocialDiv }  from './../../styled/Home.style'
 import WheninView from './WheninView'
+import HomeContainers from '../containers/Home'
 
 class Home extends Component {
   render() {
@@ -16,6 +17,7 @@ class Home extends Component {
           <h1>Artem Arshaniy</h1>
           <ImageText>Front-end Developer</ImageText>
         </HomeImg>
+        <HomeContainers />
         <div style={styleTextHome}>
         <WheninView>
         {
@@ -40,7 +42,7 @@ class Home extends Component {
             }
         </WheninView>
       </div>
-        </section>
+    </section>
     );
   }
 }

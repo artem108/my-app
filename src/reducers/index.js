@@ -1,12 +1,13 @@
 import { combineReducers } from 'redux'
-import entranceReducers from '../Entrance/entranc'
-import newsReducers from '../Main/reducers/ReduceNews'
+// import entranceReducers from '../Entrance/entranc'
+import textReducer from '../Main/reducers/textReducer'
+import selectorsText from '../Main/reducers/selectors'
 
 const allReducers = combineReducers ({
 
-  entrance: entranceReducers,
-  news: newsReducers
-
+  // entrance: entranceReducers,
+  text: textReducer,
+  selector: selectorsText
 });
 
 export default allReducers

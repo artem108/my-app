@@ -1,10 +1,30 @@
 .chillFBImg {
   background-image: url(../img/chill.png);
 }
-.slide-enter {
-  transform: translateX(-100%);
+
+.question-enter {
+   transform: translateX(-100%);
 }
-.slide-enter .slide-enter-active {
+
+.question-enter.question-enter-active {
   transform: translateX(0);
   transition: transform 5s ease-out;
 }
+
+.answer-enter {
+   transform: translateX(-100%);
+}
+
+.answer-enter.answer-enter-active {
+  transform: translateX(0);
+  transition: transform 5s ease-out;
+}
+//
+// .slide-leave {
+//   opacity: 1;
+// }
+//
+// .slide-leave.slide-leave-active {
+//   opacity: 0.01;
+//   transition: opacity 300ms ease-in;
+// }

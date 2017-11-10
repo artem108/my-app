@@ -24,27 +24,33 @@ class Dialog extends Component {
 
     const listAnswers = arrDialog.map((item, index) => {
         if (item === 'Answer') {
-            return <li key={index} style={{textAlign: 'left', color: 'black', backgroundColor:'red' ,width: '100%'}} onClick={this.addItem.bind(this)}><H2>{item}</H2></li>;
+            return <li key={index} style={{textAlign: 'left', color: 'black', width: '100%'}} onClick={this.addItem.bind(this)}><H2>{item}</H2></li>;
         } else {
-            return <li key={index} style={{textAlign: 'left', color: 'black', width: '100%', cursor: 'pointer'}}
+            return <li key={index} style={{textAlign: 'right', color: 'black', width: '100%', cursor: 'pointer'}}
                     onClick={this.addItem.bind(this)}>
                     <H2>{item}</H2></li>;
         }
     })
-
     let lastQuestion = listAnswers[listAnswers.length - 1].props
     const lastQuestStyle = lastQuestion.style
     console.log(lastQuestion.children);
     lastQuestStyle.color = 'red'
+    let orAnswer
+    if (lastQuestion.children.props.children === 'Question?') {
+     orAnswer = true
+   } else {
+     orAnswer = false
+   }
+
 
     return (
       <section style={{width: '80%'}}>
            <Title>About me</Title>
           <ReactCSSTransitionGroup
               component="ul"
-              transitionName="slide"
-              transitionEnterTimeout={5000}
-              transitionLeaveTimeout={3000}>
+              transitionName={orAnswer? 'question' : 'answer'}
+              transitionEnterTimeout={2000}
+              transitionLeaveTimeout={2000}>
               {listAnswers}
             </ReactCSSTransitionGroup>
           <PreloaderIcon

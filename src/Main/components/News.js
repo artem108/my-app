@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import NewsList from '../containers/NewsList'
+// import NewsList from '../containers/NewsList'
 
 class News extends Component {
 
@@ -15,7 +15,7 @@ class News extends Component {
           </article>
         </header>
         <section className="main-news">
-          <NewsList />
+      
         </section>
           </div>
 

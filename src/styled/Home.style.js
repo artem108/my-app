@@ -12,6 +12,22 @@ export const ImageText = styled.h2 `
   text-align: center;
   font-size: 1em;
 `;
+export const SocialLinks = styled.div `
+  position: fixed;
+  bottom: 60px;
+  left: 40px;
+`;
+export const SocialDiv = styled.div `
+  color: red;
+  align-content: center;
+  font-weight: bold;
+  display: flex;
+  font-size: 1.5em;
+  transition: color .3s;
+  z-index: 99;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+`;
 
 export const StyleText = styled.p `
   font-size: 2em;
