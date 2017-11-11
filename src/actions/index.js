@@ -1,7 +1,7 @@
-export const selectHome = (tex) => {
-  console.log('now text is', tex.text);
+export const selectHome = (state) => {
+
     return {
       type: 'SELECTED_HOME',
-      payload: tex
+      payload: state
     }
 }

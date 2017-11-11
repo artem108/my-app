@@ -1,11 +1,10 @@
 import styled, {css} from 'styled-components'
 
 export const Text = styled.p `
-  fontSize: '2em';
-  textAlign: 'left';
+  font-size: 2em;
+  text-align: left;
 `;
 
 export const RadarStyle = styled.section `
-  width:'50%';
-  float:'left';
+  width: 50%;
 `;

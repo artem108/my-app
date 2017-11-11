@@ -2,7 +2,7 @@
   background-image: url(../img/chill.png); }
 
 .question-enter {
-  transform: translateX(-100%); }
+  transform: translateX(100%); }
 
 .question-enter.question-enter-active {
   transform: translateX(0);

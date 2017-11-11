@@ -31,26 +31,20 @@ class Dialog extends Component {
                     <H2>{item}</H2></li>;
         }
     })
-    let lastQuestion = listAnswers[listAnswers.length - 1].props
-    const lastQuestStyle = lastQuestion.style
-    console.log(lastQuestion.children);
-    lastQuestStyle.color = 'red'
-    let orAnswer
-    if (lastQuestion.children.props.children === 'Question?') {
-     orAnswer = true
-   } else {
-     orAnswer = false
-   }
 
+    const lastQuestion = listAnswers[listAnswers.length - 1].props
+    const lastQuestStyle = lastQuestion.style
+
+    lastQuestStyle.color = 'red'
 
     return (
       <section style={{width: '80%'}}>
            <Title>About me</Title>
           <ReactCSSTransitionGroup
               component="ul"
-              transitionName={orAnswer? 'question' : 'answer'}
-              transitionEnterTimeout={2000}
-              transitionLeaveTimeout={2000}>
+              transitionName={'answer'}
+              transitionEnterTimeout={4000}
+              transitionLeaveTimeout={4000}>
               {listAnswers}
             </ReactCSSTransitionGroup>
           <PreloaderIcon
