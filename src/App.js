@@ -17,7 +17,7 @@ class App extends Component {
       <div className="App">
         <SocialLinks>
           <SocialDiv>
-          <p style={{paddingRight: '20px'}}>CONTACT ME</p>
+          {/* <p style={{}}>CONTACT ME</p> */}
           <a target="_blank" href='https://www.facebook.com/profile.php?id=100005119098321' style={linkStyle}><i className="fa fa-facebook"></i></a>
           <a target="_blank" href='https://www.linkedin.com/in/artem-arshanyi-452106132/' style={linkStyle}><i className="fa fa-linkedin"></i></a>
           <a target="_blank" href='https://github.com/artem108' style={linkStyle}><i className="fa fa-github"></i></a>

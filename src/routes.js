@@ -6,6 +6,7 @@ import MySkillsContainers from './Main/containers/MySkills'
 import Talk from './Main/components/Talk'
 import News from './Main/components/News'
 import Dialog from './Main/components/Dialog'
+import Brain from './Main/components/Brain'
 
 
 export default (
@@ -15,6 +16,7 @@ export default (
   <Route path='/skills' component={MySkillsContainers}></Route>
   <Route path='/aboutMe' component={Dialog}></Route>
   <Route path='/news' component={News}></Route>
+  <Route path='/brain' component={Brain}></Route>
 </Route>
 </Router>
 );

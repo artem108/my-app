@@ -1,6 +1,15 @@
 .chillFBImg {
   background-image: url(../img/chill.png); }
 
+.face {
+  margin: 0 auto;
+  padding-top: 50px;
+  width: 30%;
+  height: 400px;
+  background-image: url(../img/face.gif);
+  background-repeat: no-repeat;
+  background-size: contain; }
+
 .question-enter {
   transform: translateX(100%); }
 

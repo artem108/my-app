@@ -5,12 +5,12 @@ import { selectHome } from '../../actions/index'
 import Home from '../components/Home'
 
 class HomeContainers extends Component {
-
   render() {
     const styleTextHome = {
       borderLeft:'5px solid black'
     }
-    
+    selectHome()
+
     return (
     <Home
       text={this.props.home.map((text) => text.text)}

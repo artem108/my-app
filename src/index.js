@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import allReducers  from './reducers'
 import routes from './routes'
+import { VoicePlayer, VoiceRecognition } from 'react-voice-components'
 
 import './index.css'
 import App from './App'
