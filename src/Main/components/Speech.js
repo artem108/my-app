@@ -1,6 +1,5 @@
 import React, { PropTypes, Component } from 'react'
 import SpeechRecognition from 'react-speech-recognition'
-import { VoicePlayer } from 'react-voice-components'
 import '../../css/Talk.css'
 
 let options = {
@@ -21,12 +20,6 @@ componentDidUpdate() {
     this.state.texts = "hello artem nice day"
     this.setState({texts: this.state.texts})
     console.log(this.state.texts);
-    return (
-      <VoicePlayer
-        play
-        text={this.state.texts}
-      />
-    )
   }
 
 }
@@ -46,17 +39,14 @@ componentDidUpdate() {
     if (transcript) {
 
     }
+
     return (
       <div>
-        it will be cool soon ...
-        <button onClick={resetTranscript}>Reset</button>
-        <section className='face'>
-        </section>
+        it will be soon ...
+        <button onClick={resetTranscript}>Reset</button><br/>
+        {/* <section className='face'>
+        </section> */}
         <span style={{fontSize: '2em'}}>{transcript}</span>
-        <VoicePlayer
-          play
-          text={this.state.texts}
-        />
       </div>
     )
   }

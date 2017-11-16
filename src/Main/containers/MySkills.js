@@ -11,20 +11,31 @@ class MySkillsContainers extends Component {
       datasets: [
         {
           label: 'max',
-          data: [10, 10, 10, 10, 10]
+          data: [10, 10, 10, 10, 10],
+          fillColor: 'rgba(250, 250, 250, 1)',
+          strokeColor: 'rgba(200, 200, 200, 1)',
+          pointBackgroundColor: 'rgb(255, 0, 0)',
+          pointBorderColor: 'rgb(255, 0, 0)',
+          pointHoverBackgroundColor: 'rgb(255, 0, 0)',
+          pointHoverBorderColor: 'rgb(255, 0, 0)',
+
+
         },
         {
           label: 'min',
           data:  [6, 9, 8, 4, 1],
-          backgroundColor: 'rgba(104,104,104,1)',
-          borderColor: 'rgba(104,104,104,1)',
-          pointBackgroundColor: 'rgba(104,104,104,1)',
-          pointBorderColor: 'rgba(104,104,104,1)',
-          pointHoverBackgroundColor: 'rgba(104,104,104,1)',
-          pointHoverBorderColor: 'rgba(104,104,104,1)',
+          fillColor: 'rgba(255,000,000, 1)',
+          strokeColor: 'rgba(0, 0, 0, 1)',
+          pointBackgroundColor: 'rgb(255, 0, 0)',
+          pointBorderColor: 'rgb(255, 0, 0)',
+          pointHoverBackgroundColor: 'rgb(255, 0, 0)',
+          pointHoverBorderColor: 'rgb(255, 0, 0)',
+
+
         }
       ]
     }
+
     return (
     <MySkills
       text={this.props.mySkills.map((text) => text.text)}

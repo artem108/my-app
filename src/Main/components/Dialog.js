@@ -28,7 +28,7 @@ class Dialog extends Component {
         } else {
             return <li key={index} style={{textAlign: 'right', color: 'black', width: '100%', cursor: 'pointer'}}
                     onClick={this.addItem.bind(this)}>
-                    <H2>{item}</H2></li>;
+                    <H2>{index}{item}</H2></li>;
         }
     })
 
