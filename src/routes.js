@@ -3,10 +3,10 @@ import {IndexRoute, Router, Route, hashHistory } from 'react-router'
 import App from './App'
 import HomeContainers from './Main/containers/Home'
 import MySkillsContainers from './Main/containers/MySkills'
-import Talk from './Main/components/Talk'
-import News from './Main/components/News'
-import Dialog from './Main/components/Dialog'
+import DialogContainers from './Main/containers/Dialog'
 import Brain from './Main/components/Brain'
+// import Talk from './Main/components/Talk'
+// import News from './Main/components/News'
 
 
 export default (
@@ -14,8 +14,7 @@ export default (
 <Route path='/' component={App}>
   <IndexRoute path='/'component={HomeContainers}/>
   <Route path='/skills' component={MySkillsContainers}></Route>
-  <Route path='/aboutMe' component={Dialog}></Route>
-  <Route path='/news' component={News}></Route>
+  <Route path='/aboutMe' component={DialogContainers}></Route>
   <Route path='/brain' component={Brain}></Route>
 </Route>
 </Router>

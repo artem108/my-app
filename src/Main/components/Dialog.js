@@ -20,6 +20,9 @@ class Dialog extends Component {
   }
 
   render() {
+    const {
+      title
+    } = this.props
     const arrDialog = this.state.dialog
 
     const listAnswers = arrDialog.map((item, index) => {
@@ -39,7 +42,7 @@ class Dialog extends Component {
 
     return (
       <section style={{width: '80%'}}>
-           <Title>About me</Title>
+           <Title>{title}</Title>
           <ReactCSSTransitionGroup
               component="ul"
               transitionName={'answer'}

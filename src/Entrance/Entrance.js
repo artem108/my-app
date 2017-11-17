@@ -78,7 +78,6 @@ class Entrance extends Component {
       <div>
        {entrance}
         {content}
-
         </div>
     );
   }

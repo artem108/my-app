@@ -5,13 +5,14 @@ import { RevealPRight, RevealPLeft, Title, HomeImg, ImageText, StyleText, Social
 import WheninView from './WheninView'
 
 class Home extends Component {
+
   render() {
+
     const {
       text,
       title,
       styleTextHome
     } = this.props
-    console.log('title',title);
     return (
       <section>
           <Title>{title}</Title>

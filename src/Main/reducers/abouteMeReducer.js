@@ -1,8 +1,8 @@
-import { SELECTED_HOME } from '../../constants/constants'
+import { SELECTED_ABOUTE_ME } from '../../constants/constants'
 
 const initialState =     {
-      id: 1,
-      title: 'Home',
+      id: 3,
+      title: 'Aboute me',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
     }
 
@@ -11,8 +11,8 @@ const initialState =     {
 export default function (state = initialState, action) {
 
   switch (action.type) {
-  case SELECTED_HOME:
-    return { ...state, home: action.payload }
+  case SELECTED_ABOUTE_ME:
+    return { ...state, aboute: action.payload }
 
   default:
     return state;

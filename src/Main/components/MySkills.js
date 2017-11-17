@@ -13,7 +13,8 @@ class MySkills extends Component {
       text,
       title
     } = this.props
-    const skillsText = text[0].technologies
+    console.log(text);
+    const skillsText = text.technologies
 
     const listAnswers = skillsText.map((item, index) => {
     return <li key={index} style={{marginBottom: '10px'}}> - {item}</li>;

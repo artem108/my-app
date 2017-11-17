@@ -1,20 +1,32 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { selectHome } from '../../actions/index'
 import Home from '../components/Home'
+import * as selectHome from '../../actions/index'
 
 class HomeContainers extends Component {
+
+  componentWillMount() {
+    const {selectHome} = this.props.selectHome
+    const home = this.props.home
+    selectHome(home)
+  }
   render() {
+    const {
+      text,
+      title
+    } = this.props.home
+
+    const { selectHome } = this.props.selectHome
+
     const styleTextHome = {
       borderLeft:'5px solid black'
     }
-    selectHome()
 
     return (
     <Home
-      text={this.props.home.map((text) => text.text)}
-      title={this.props.home.map((title) => title.title)}
+      text={text}
+      title={title}
       styleTextHome={styleTextHome}
     />
     );
@@ -26,7 +38,9 @@ const mapStateToProps = (state) => {
   }
 }
 
-const matchDispatchToProps = (dispatch) => {
-  return bindActionCreators({selectHome: selectHome}, dispatch)
+const mapDispatchToProps = (dispatch) => {
+  return {
+  selectHome: bindActionCreators(selectHome, dispatch)
+  }
 }
-export default connect (mapStateToProps, matchDispatchToProps)(HomeContainers)
+export default connect (mapStateToProps, mapDispatchToProps)(HomeContainers)

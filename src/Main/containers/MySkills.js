@@ -1,11 +1,22 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { selectHome } from '../../actions/index'
 import MySkills from '../components/MySkills'
+import * as selectMySkills from '../../actions/index'
 
 class MySkillsContainers extends Component {
+
+  componentWillMount() {
+    const {selectMySkills} = this.props.selectMySkills
+    const skills = this.props.skills
+    selectMySkills(skills)
+  }
   render() {
+    const {
+      title,
+      text
+    } = this.props.skills
+
     const data = {
       labels: ['JS', 'HTML5', 'CSS3', 'REACT.JS', 'NODE.JS' ],
       datasets: [
@@ -38,8 +49,8 @@ class MySkillsContainers extends Component {
 
     return (
     <MySkills
-      text={this.props.mySkills.map((text) => text.text)}
-      title={this.props.mySkills.map((title) => title.title)}
+      text={text}
+      title={title}
       data={data}
     />
     );
@@ -47,11 +58,13 @@ class MySkillsContainers extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-    mySkills:state.mySkillsReducer
+    skills:state.skills
   }
 }
 
-const matchDispatchToProps = (dispatch) => {
-  return bindActionCreators({selectHome: selectHome}, dispatch)
+const mapDispatchToProps = (dispatch) => {
+  return {
+  selectMySkills: bindActionCreators(selectMySkills, dispatch)
+  }
 }
-export default connect (mapStateToProps, matchDispatchToProps)(MySkillsContainers)
+export default connect (mapStateToProps, mapDispatchToProps)(MySkillsContainers)
