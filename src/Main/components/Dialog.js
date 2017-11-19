@@ -14,25 +14,41 @@ class Dialog extends Component {
      }
   }
   addItem() {
-    this.state.dialog.push('Answer')
-    this.state.dialog.push('Question?')
+    // this.state.dialog.push('Answer')
+    // this.state.dialog.push('Question?')
+    // console.log(this.state.dialog);
     this.setState({dialog: this.state.dialog})
   }
 
   render() {
     const {
-      title
+      title,
+      texts
     } = this.props
+
     const arrDialog = this.state.dialog
 
     const listAnswers = arrDialog.map((item, index) => {
-        if (item === 'Answer') {
-            return <li key={index} style={{textAlign: 'left', color: 'black', width: '100%'}} onClick={this.addItem.bind(this)}><H2>{item}</H2></li>;
+      let arrItem = texts[index]
+
+        if (item === 'Answer' || item === 'Hello, my name Artem'
+            || item === 'Tehnical skills it good, but let me show some info aboye me'
+            || item === 'Yes song1, song2, song3' || item === 'This _.|..') {
+
+              // console.log(texts[index][texts[index].length-1]);
+              this.state.dialog.push(texts[index])
+            return (
+              <li key={index} style={{textAlign: 'left', color: 'black', width: '100%'}} onClick={this.addItem.bind(this)}><H2>{item}</H2></li>
+            )
         } else {
-            return <li key={index} style={{textAlign: 'right', color: 'black', width: '100%', cursor: 'pointer'}}
+
+            this.state.dialog.push(texts[index])
+            return (
+                <li key={index} style={{textAlign: 'right', color: 'black', width: '100%', cursor: 'pointer'}}
                     onClick={this.addItem.bind(this)}>
-                    <H2>{index}{item}</H2></li>;
-        }
+                    <H2>{index}{item}</H2></li>
+        )
+      }
     })
 
     const lastQuestion = listAnswers[listAnswers.length - 1].props

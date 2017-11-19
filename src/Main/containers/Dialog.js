@@ -9,18 +9,18 @@ class DialogContainers extends Component {
   componentWillMount() {
     const { selectAbouteMe } = this.props.selectAbouteMe
     // const home = this.props.home
-                                                   selectAbouteMe(this.props.aboute)
+    selectAbouteMe(this.props.aboute)
   }
   render() {
     const {
-      text,
-                title
+      title,
+      answer_question
     } = this.props.aboute
 
     return (
     <Dialog
       title={title}
-      text={text}
+      texts={answer_question}
     />
     );
   }
