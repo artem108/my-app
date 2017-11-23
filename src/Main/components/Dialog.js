@@ -33,20 +33,20 @@ class Dialog extends Component {
 
         if (item === 'Answer' || item === 'Hello, my name Artem'
             || item === 'Tehnical skills it good, but let me show some info aboye me'
-            || item === 'Yes song1, song2, song3' || item === 'This _.|..') {
+            || item === 'Yes song1, song2, song3'
+            || item === 'This') {
 
               // console.log(texts[index][texts[index].length-1]);
               this.state.dialog.push(texts[index])
             return (
-              <li key={index} style={{textAlign: 'left', color: 'black', width: '100%'}} onClick={this.addItem.bind(this)}><H2>{item}</H2></li>
+              <li key={index} style={{textAlign: 'left', color: 'black', width: '100%'}} onClick={this.addItem.bind(this)}><H2>{arrDialog[arrDialog.length-1]}</H2></li>
             )
         } else {
-
             this.state.dialog.push(texts[index])
             return (
                 <li key={index} style={{textAlign: 'right', color: 'black', width: '100%', cursor: 'pointer'}}
                     onClick={this.addItem.bind(this)}>
-                    <H2>{index}{item}</H2></li>
+                    <H2>{index}{arrDialog[arrDialog.length-1]}</H2></li>
         )
       }
     })
@@ -62,8 +62,8 @@ class Dialog extends Component {
           <ReactCSSTransitionGroup
               component="ul"
               transitionName={'answer'}
-              transitionEnterTimeout={4000}
-              transitionLeaveTimeout={4000}>
+              transitionEnterTimeout={2000}
+              transitionLeaveTimeout={2000}>
               {listAnswers}
             </ReactCSSTransitionGroup>
           <PreloaderIcon

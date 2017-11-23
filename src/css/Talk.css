@@ -15,11 +15,11 @@
 
 .question-enter.question-enter-active {
   transform: translateX(0);
-  transition: transform 5s ease-out; }
+  transition: transform 3s ease-out; }
 
 .answer-enter {
   transform: translateX(-100%); }
 
 .answer-enter.answer-enter-active {
   transform: translateX(0);
-  transition: transform 5s ease-out; }
+  transition: transform 3s ease-out; }

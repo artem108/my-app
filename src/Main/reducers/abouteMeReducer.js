@@ -10,7 +10,8 @@ const initialState =     {
         'ok... Musick?',
         'Yes song1, song2, song3',
         'Nice what yet?',
-        'This _.|..'
+        'This',
+        'ok'
 
 
       ]
