@@ -6,7 +6,6 @@ let options = {
   autoStart: true
 }
 
-
 class Dictaphone extends Component {
   constructor(props) {
     super(props)
@@ -15,13 +14,14 @@ class Dictaphone extends Component {
      }
   }
 
-componentDidUpdate() {
-    if (this.props.transcript === "Hello") {
-    this.state.texts = "hello artem nice day"
-    this.setState({texts: this.state.texts})
-    console.log(this.state.texts);
-  }
+  speak(voice) {
+const synth = window.speechSynthesis;
 
+const textForVoice = voice
+const utterThis = new SpeechSynthesisUtterance(voice);
+
+  synth.speak(utterThis)
+  // this.props.resetTranscript()
 }
   render() {
     const {
@@ -35,18 +35,29 @@ componentDidUpdate() {
     if (!browserSupportsSpeechRecognition) {
       return null
     }
-
+    let btn = null
     if (transcript) {
 
+      btn = <button onClick={resetTranscript} style={{marginTop: '15px'}}>Reset</button>
+
+      if (transcript == "Hello" || transcript == "Привет") {
+        this.speak("Hello my name Artem")
+      } else if (transcript == "How are you" || transcript == "Как дела") {
+        this.speak("Everything is fine")
+      }
+      else {
+        this.speak("Sorry dont uderstand you")
+      }
     }
 
     return (
       <div>
-        it will be soon ...
-        <button onClick={resetTranscript}>Reset</button><br/>
+        It will be soon ...<br />
+        But for now you can say "Hello" or ask "How are you"<br />
         {/* <section className='face'>
         </section> */}
-        <span style={{fontSize: '2em'}}>{transcript}</span>
+        <div style={{fontSize: '2em'}} style={{marginTop: '30px'}}>{transcript}</div> <br/>
+        {btn}
       </div>
     )
   }
