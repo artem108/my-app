@@ -1,12 +1,21 @@
 .chillFBImg {
   background-image: url(../img/chill.png); }
 
-.face {
+.startTalk {
   margin: 0 auto;
   padding-top: 50px;
   width: 30%;
   height: 400px;
   background-image: url(../img/face.gif);
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.stopTalk {
+  margin: 0 auto;
+  padding-top: 50px;
+  width: 30%;
+  height: 400px;
+  background-image: url(../img/faceStop.jpg);
   background-repeat: no-repeat;
   background-size: contain; }
 
