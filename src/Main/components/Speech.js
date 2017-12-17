@@ -73,15 +73,7 @@ class Dictaphone extends Component {
       <div>
         It will be soon ...<br />
         But for now you can say "Hello" or ask "How are you"<br />
-
-          <section style={{marginTop: '30px'}}>
-              { startTalk ?
-               <section className='startTalk'></section>
-               :  <section className='stopTalk'></section>
-              }
-          </section>
-        <div style={{fontSize: '2em'}} style={{marginTop: '30px'}}>{transcript}</div> <br/>
-        {btn}
+        {transcript}
       </div>
     )
   }

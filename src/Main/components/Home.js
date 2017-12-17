@@ -17,7 +17,7 @@ class Home extends Component {
       <section>
           <Title>{title}</Title>
         <HomeImg className='home-img'>
-          <h1>Artem Arshaniy</h1>
+          <h1 style={{display: 'none'}}>Artem Arshaniy</h1>
           <ImageText>Front-end Developer</ImageText>
         </HomeImg>
         <div style={styleTextHome}>

@@ -16,15 +16,15 @@ class App extends Component {
     return (
       <div className="App">
         <SocialLinks>
-          <SocialDiv>
-          {/* <p style={{}}>CONTACT ME</p> */}
-          <a target="_blank" href='https://www.facebook.com/profile.php?id=100005119098321' style={linkStyle}><i className="fa fa-facebook"></i></a>
-          <a target="_blank" href='https://www.linkedin.com/in/artem-arshanyi-452106132/' style={linkStyle}><i className="fa fa-linkedin"></i></a>
-          <a target="_blank" href='https://github.com/artem108' style={linkStyle}><i className="fa fa-github"></i></a>
-        </SocialDiv>
-        </SocialLinks>
-        <NavigationBar />
-        {this.props.children}
+           <SocialDiv>
+           {/* <p style={{}}>CONTACT ME</p> */}
+           <a target="_blank" href='https://www.facebook.com/profile.php?id=100005119098321' style={linkStyle}><i className="fa fa-facebook"></i></a>
+           <a target="_blank" href='https://www.linkedin.com/in/artem-arshanyi-452106132/' style={linkStyle}><i className="fa fa-linkedin"></i></a>
+           <a target="_blank" href='https://github.com/artem108' style={linkStyle}><i className="fa fa-github"></i></a>
+         </SocialDiv>
+         </SocialLinks>
+         <NavigationBar />
+         {this.props.children}
         </div>
     );
   }

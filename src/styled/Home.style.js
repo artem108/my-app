@@ -11,6 +11,7 @@ export const Title = styled.h1 `
 export const ImageText = styled.h2 `
   text-align: center;
   font-size: 1em;
+  display: none;
 `;
 export const SocialLinks = styled.div `
   position: fixed;

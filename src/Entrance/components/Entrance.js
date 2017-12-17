@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import PreloaderIcon, {ICON_TYPE} from 'react-preloader-icon';
-import List from './containers/Entrance'
-import './Entrance.css'
-import Main from '../Main/components/Main'
-import NameUser from './NameUser'
+import '../css/Entrance.css'
 
 class Entrance extends Component {
   constructor(props) {
@@ -47,38 +44,32 @@ class Entrance extends Component {
 
     let content
     let entrance
-    let btnEntrance = <button onClick={this.showContent1.bind(this)}>btn1</button>
+    let btnEntrance =
+
+    <div className='btnEntrance1' style={{width: '300px'}}>
+      <p>For login press on the button</p><br/>
+    <button onClick={this.showContent1.bind(this)}>Button</button>
+  </div>
 
     if (this.state.showContent1) {
       btnEntrance =
-      <div className='btnEntrance2'>
-        <p>on this</p>
-      <button onClick={this.showContent2.bind(this)}>btn2</button>
+      <div className='btnEntrance2' style={{width: '50px', marginTop: '300px'}}>
+        <p>On this</p>
+      <button onClick={this.showContent2.bind(this)}>Button</button>
     </div>
     }
     if (this.state.showContent2) {
       btnEntrance =
-      <div className='btnEntrance3'>
-        <p>and on this</p>
-      <button onClick={this.showContent3.bind(this)}>btn3</button>
+      <div className='btnEntrance3' style={{width: '200px', marginLeft: '45%'}}>
+        <p>And on this</p>
+      <button onClick={this.showContent3.bind(this)}>Button</button>
     </div>
     }
 
-    if (this.state.showContent3) {
-      content = <Main/>
-    } else  {
-      entrance =
+    return (
       <section>
-      <List />
         {btnEntrance}
       </section>
-
-    }
-    return (
-      <div>
-       {entrance}
-        {content}
-        </div>
     );
   }
 }
