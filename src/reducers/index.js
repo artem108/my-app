@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux'
-// import entranceReducers from '../Entrance/entranc'
+import loginUser from '../Entrance/reducer'
 import homeReducer from '../Main/reducers/homeReducer'
 import mySkillsReducer from '../Main/reducers/mySkillsReducer'
 import abouteMeReducer from '../Main/reducers/abouteMeReducer'
 
 
 const rootReducer = combineReducers ({
-  // entrance: entranceReducers,
+  login: loginUser,
   home: homeReducer,
   skills: mySkillsReducer,
   aboute: abouteMeReducer

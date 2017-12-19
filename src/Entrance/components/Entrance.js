@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import PreloaderIcon, {ICON_TYPE} from 'react-preloader-icon';
-import '../css/Entrance.css'
+import '../../css/Entrance.css'
 
 class Entrance extends Component {
   constructor(props) {
@@ -17,29 +17,19 @@ class Entrance extends Component {
   }
 
   showContent1() {
-         this.setState({showContent1: true})
+    this.setState({showContent1: true})
      }
   showContent2() {
-        this.setState({showContent2: true})
-        }
+    this.setState({showContent2: true})
+    }
   showContent3() {
-        this.setState({showContent3: true})
+    const { logined } = this.props
+
+    this.setState({showContent3: true})
+
+    logined()
            }
 
-           componentDidMount() {
-             setTimeout(() =>
-               <div>
-                 <PreloaderIcon
-                   type={ICON_TYPE.OVAL}
-                   size={32}
-                   strokeWidth={8} // min: 1, max: 50
-                   strokeColor="#F0AD4E"
-                   duration={800}
-                 />
-               </div>
-
-             , 1500);
-           }
   render() {
 
     let content

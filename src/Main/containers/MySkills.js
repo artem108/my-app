@@ -7,7 +7,7 @@ import * as selectMySkills from '../../actions/index'
 class MySkillsContainers extends Component {
 
   componentWillMount() {
-    const {selectMySkills} = this.props.selectMySkills
+    const  { selectMySkills } = this.props.selectMySkills
     const skills = this.props.skills
     selectMySkills(skills)
   }

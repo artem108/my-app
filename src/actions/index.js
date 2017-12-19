@@ -18,3 +18,10 @@ export function selectAbouteMe(state) {
       aboute: state
     }
 }
+
+export function loginUser(state) {
+    return {
+      type: 'LOGIN',
+      login: state
+    }
+}

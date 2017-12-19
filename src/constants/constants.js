@@ -2,3 +2,4 @@
 export const SELECTED_HOME = 'SELECTED_HOME'
 export const SELECTED_SKILLS = 'SELECTED_SKILLS'
 export const SELECTED_ABOUTE_ME = 'SELECTED_ABOUTE_ME'
+export const LOGIN = 'LOGIN'
