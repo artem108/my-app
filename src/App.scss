@@ -1,6 +1,20 @@
+$width-box: 150px;
+$height-box: 150px;
+$back-color: grey;
+
 .App {
   margin: 0 auto;
   margin-top: 3em;
   width: 80%;
   text-align: center;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+section {
+  width: $width-box;
+  height: $height-box;
+  background-color: $back-color;
+  }
 }

@@ -3,3 +3,12 @@
   margin-top: 3em;
   width: 80%;
   text-align: center; }
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  .flex-container section {
+    width: 150px;
+    height: 150px;
+    background-color: grey; }

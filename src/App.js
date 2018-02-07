@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import './App.css'
 import NavigationBar from './Main/components/NavigationBar'
-import { SocialLinks, SocialDiv }  from './styled/Home.style'
 import EntranceComponent from './Entrance/containers/Entrance'
+import { SocialLinks, SocialDiv }  from './styled/Home.style'
 
 const linkStyle = {
   listStyle: 'none',
